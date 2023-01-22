@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Election Results</title>
+  <link rel="shortcut icon" type="image/png" href="indexcss/Emblem_of_the_ECP.png">
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="indexcss/indexstyle.css" />
+  <link rel="stylesheet" type="text/css" href="indexcss/loaderstyle.css">
+  <link rel="stylesheet" type="text/css" href="indexcss/loader.css">
+  <link rel="stylesheet" type="text/css" href="indexcss/background.css">
+  <script>
+    window.addEventListener('load', function () {
+
+      var loader = document.getElementById('preloader-container');
+      loader.style.opacity = '0';
+
+      loader.addEventListener('transitionend', function () {
+        loader.style.display = 'none';
+      })
+    });
+
+    //   logout functionality small code  
+    var abc = localStorage.getItem("code");
+
+    if (abc == "secret") {
+
+    } else {
+      window.location.href = "index.html";
+    }
+  </script>
+  <style type="text/css">
+    input[type=text],
+    input[type=password] {
+      width: 100%;
+      padding: 16px 8px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .icon {
+      font-size: 110px;
+      display: flex;
+      justify-content: center;
+      color: #4286f4;
+    }
+
+    button {
+      background-image: linear-gradient(to right, #dcba12 0%, #ffff00  51%, #f7d31e  100%);
+      color: black;
+      padding: 14px 0;
+      margin: 10px 0;
+      border: none;
+      cursor: pointer;
+      width: 48%;
+    }
+
+    h1 {
+      text-align: center;
+      fone-size: 18;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    .formcontainer {
+      text-align: center;
+      margin: 24px 50px 12px;
+    }
+
+    .container {
+      padding: 16px 0;
+      text-align: left;
+    }
+
+    span.psw {
+      float: right;
+      padding-top: 0;
+      padding-right: 15px;
+    }
+
+    /* Change styles for span on extra small screens */
+    @media screen and (max-width: 300px) {
+      span.psw {
+        display: block;
+        float: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="preloader-container" class="">
+    <div id="preloader-content">
+      <div id="preloader-circle"></div>
+      <p>Loading...</p>
+    </div>
+  </div>
+
+  <div class="outer">
+    <div class="middle">
+      <div class="inner">
+        <div class="container" style="width: 650px;">
+          <div class="row">
+            <div class="col-lg-12">
+              <h1 class="text-center">Election Insights</h1>
+              <hr />
+              <br />
+              <div id="loader">
+                <p class="text-center">Loading...</p> <!-- iski id loader hai -->
+              </div>
+              <div id="content" style="display: none;">
+                <!-- ------------- contenet (KUCH DISAPLY NI KRNA START MN) -->
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Party</th>
+                      <th scope="col">Votes</th>
+                    </tr>
+                  </thead>
+                  <tbody id="candidatesResults">
+                    <!----------------------- content of table -->
+                  </tbody>
+                </table>
+                <hr /> <!-- (______________________ line) -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="AdminDash.html"><button><strong>Back</strong></button></a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script>
+
+
+
+  </script>
+
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/app.js"></script>
+  <!-- The legacy-web3 script must run BEFORE your other scripts. -->
+  <script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.min.js"></script>
+  <!-- Or: -->
+  <script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.js"></script>
+
+
+</body>
+
+</html>

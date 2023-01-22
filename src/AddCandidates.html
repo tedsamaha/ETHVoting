@@ -1,0 +1,192 @@
+<html lang="en">
+
+<head>
+  <title>Add Candidates Page</title>
+  <link rel="shortcut icon" type="image/png" href="indexcss/Emblem_of_the_ECP.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <!--<link rel="stylesheet" href="style.css">-->
+
+  <link rel="stylesheet" type="text/css" href="indexcss/indexstyle.css" />
+  <link rel="stylesheet" type="text/css" href="indexcss/loaderstyle.css">
+  <link rel="stylesheet" type="text/css" href="indexcss/loader.css">
+  <link rel="stylesheet" type="text/css" href="indexcss/background.css">
+
+  <script>
+    window.addEventListener('load', function () {
+
+      var loader = document.getElementById('preloader-container');
+      loader.style.opacity = '0';
+
+      loader.addEventListener('transitionend', function () {
+        loader.style.display = 'none';
+      })
+    });
+
+    //   logout functionality small code  
+    var abc = localStorage.getItem("code");
+
+    if (abc == "secret") {
+
+    } else {
+      window.location.href = "index.html";
+    }
+  </script>
+  <style type="text/css">
+    input[type=text],
+    input[type=password] {
+      width: 100%;
+      padding: 16px 8px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .icon {
+      font-size: 110px;
+      display: flex;
+      justify-content: center;
+      color: #4286f4;
+    }
+
+    button {
+      background-image: linear-gradient(to right, #dcba12 0%, #ffff00  51%, #f7d31e  100%);
+      color: black;
+      padding: 14px 0;
+      margin: 10px 0;
+      border: none;
+      cursor: pointer;
+      width: 48%;
+    }
+
+    h1 {
+      text-align: center;
+      fone-size: 18;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    .formcontainer {
+      text-align: center;
+      margin: 24px 50px 12px;
+    }
+
+    .container {
+      padding: 16px 0;
+      text-align: left;
+    }
+
+    span.psw {
+      float: right;
+      padding-top: 0;
+      padding-right: 15px;
+    }
+
+    /* Change styles for span on extra small screens */
+    @media screen and (max-width: 300px) {
+      span.psw {
+        display: block;
+        float: none;
+      }
+    }
+  </style>
+
+
+
+</head>
+
+<body>
+  <div id="preloader-container" class="">
+    <div id="preloader-content">
+      <div id="preloader-circle"></div>
+      <p>Loading...</p>
+    </div>
+  </div>
+  <!--  <div class="wrapper">
+    <nav>
+      <input type="checkbox" id="show-search">
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><a href="#">E-Voting System</a></div>
+        <ul class="links">
+          <li><a href="AdminDash.html">Home</a></li>
+          <li><a href="#">About</a></li>
+
+          <li>
+            <a href="#" class="desktop-link">Services</a>
+            <input type="checkbox" id="show-services">
+            <label for="show-services">Services</label>
+            <ul>
+              <li><a href="#">Add Candidates</a></li>
+              <li><a href="changeelectionstatus.html">Election Status</a></li>
+              <li><a href="Result.html">View Result</a></li>
+              <li><a href="insights.html">View Insights</a></li>
+  
+            </ul>
+          </li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </div>
+   <a href="index.html"><label class="search-icon">Logout</label></a>
+    </nav>
+  </div> -->
+  <div class="outer">
+    <div class="middle">
+      <div class="inner">
+        <div class="formcontainer">
+          <div class="container">
+
+
+            <h1>Add Candidate</h1>
+            <center> <label for="uname"><strong>Candidate Name</strong></label></center>
+            <input type="text" placeholder="Enter Candidate Name" name="uname" id="ccaa" required>
+            <center><label for="uname"><strong>Party Name</strong></label></center>
+            <input type="text" placeholder="Enter Party Name" name="uname" id="cca" required>
+
+            <!--        <label for="mail"><strong>Candidate Party Name</strong></label>
+                <input type="text" placeholder="Enter Candidate Party Name" name="mail" required> -->
+          </div>
+          <button  id="deposit" onclick="addthis()"><strong>Save Candidate Information</strong></button><br>
+          <a href="AdminDash.html"><button><strong>Back</strong></button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- 
+   <div> 
+    
+      <label for="uname"><strong>Enter candidate name</strong></label>
+<input id="ccaa" type="text" >
+
+    <button id="deposit" onclick="addthis()" >ADD CANDIDATE</button>
+   </div>
+<!-- 
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/app.js"></script>
+  <!-- The legacy-web3 script must run BEFORE your other scripts. -->
+  <script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.min.js"></script>
+  <!-- Or: -->
+  <script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.js"></script>
+
+
+</body>
+
+</html>

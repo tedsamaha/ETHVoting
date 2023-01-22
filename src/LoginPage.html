@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Page</title>
+<link rel="shortcut icon" type="image/png" href="indexcss/Emblem_of_the_ECP.png">
+<link rel="stylesheet" type="text/css" href="indexcss/indexstyle.css" />
+<link rel="stylesheet" type="text/css" href="indexcss/loaderstyle.css"> 
+<link rel="stylesheet" type="text/css" href="indexcss/loader.css">
+<link rel="stylesheet" type="text/css" href="indexcss/background.css">
+
+<script>
+window.addEventListener('load', function(){
+                
+var loader = document.getElementById('preloader-container');
+loader.style.opacity = '0';
+                
+loader.addEventListener('transitionend', function(){
+loader.style.display = 'none';    
+})
+});
+</script>
+
+</head>
+<body>
+<div id="preloader-container" class="">
+<div id="preloader-content">
+<div id="preloader-circle"></div>
+<p>Loading...</p>    
+</div>
+</div>
+<div class="outer">
+  <div class="middle">
+    <div class="inner">
+	<img src="indexcss/Emblem_of_the_ECP.png" width="100px" height="100px" >
+	<p>Welcome To E-Voting System</p>
+	<a href="VoterLoginPage.html"><input type="button" class="button" value="User Login"  style="width: 90%;"> <br></a>
+     <a href="AdminLoginPage.html"><input type="button" class="button" value="Admin Login" onclick="" style="width: 90%;"> </a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
